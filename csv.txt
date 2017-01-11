@@ -1,0 +1,11 @@
+csvfile = file('data.csv', 'wb')
+writer = csv.writer(csvfile)
+writer.writerow(['date', 'price'])
+i=1
+data_input = [('0','0')]
+for data_ in data["USD (AM)"]:
+    temp_data = (str(i),str(data_))
+    data_input.append(temp_data)
+
+writer.writerows(data_input)
+csvfile.close()
